@@ -1,0 +1,2 @@
+<script setup lang="ts">import { useMediaStore } from '../store'; import MediaCard from '../components/MediaCard.vue'; const store = useMediaStore()</script>
+<template><main class="page"><span class="eyebrow">Personal library</span><h1>My watchlist</h1><p>Continue watching and keep the stories you want close.</p><section v-if="store.watchlistItems.length" class="media-grid"><MediaCard v-for="item in store.watchlistItems" :key="item.id" :programme="item" /></section><div v-else class="empty">Your watchlist is empty. Discover a programme to add it.</div></main></template>
